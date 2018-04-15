@@ -3,13 +3,9 @@ const app = express();
 const queries = require("./queries");
 const bodyParser = require("body-parser");
 const database = require("./database-connection")
-const request = require('request');
 
-request('https://data.colorado.gov/resource/p3jp-z4tq.json?principalcity=Denver', function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        console.log(response)
-    }
-});
+
+
 
 app.use(bodyParser.json());
 
